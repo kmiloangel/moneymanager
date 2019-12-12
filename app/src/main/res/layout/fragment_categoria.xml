@@ -1,0 +1,50 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="co.camaleon.moneymanager.fragments.CategoriaFragment"
+    android:padding="@dimen/window_padding">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_categoria"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageButton
+        android:id="@+id/new_icon"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:background="@drawable/ripple"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="4dp"
+        android:src="@mipmap/ic_add_white_48dp"
+        android:layout_gravity="end|bottom"
+        android:stateListAnimator="@drawable/button_elevation"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/fl_no_regs"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/no_regs"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="-20dp"
+            android:textColor="@color/no_regs"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_grises"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"/>
+    </FrameLayout>
+</FrameLayout>

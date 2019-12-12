@@ -1,0 +1,58 @@
+﻿//fondo
+//botones redondeados
+//boton azul y cancelar gris
+//pantalla intro
+
+//time picker para hora de movimiento
+
+//ordenar por fecha
+
+//ciclo de gastos
+//reportes
+
+//color por cuenta
+
+//balance en cuenta
+//categorias y cuentas crear desde mov
+
+//ordenar categorias y cuentas alfabeticamente
+
+//listener fecha en todo el input
+
+Para salir a producci�n:
+//categorias y cuentas orden de acuerdo al uso
+//ocultar boton ver detalle al dar clic
+falta transferencia
+//fondo cuando no hay registro
+Cuentas y categor�as por defecto
+publicidad google play
+color picker en cuenta
+//busqueda de movimientos
+//quitar coma de fechas
+
+V2
+    funcionalidad borrar todo
+    //paginacion al scroll, aplicado en movimientos
+    //filtro cuentas y categorias en movimientos
+    remove filters urg
+    transferencias urg
+    animation on filter
+    pin de ingreso
+    api
+    mejorar delete (undo)
+    traducir código
+    instructivo inicial
+    foto factura
+    recordatorios de pagos
+    idioma
+    monedas
+    buscador
+    decimales en precio
+
+
+
+
+
+
+
+To make a backup from adb: adb pull /mnt/sdcard/moneymanager-2017-07-28.db D:\User

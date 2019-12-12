@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/home_bg" android:paddingRight="10dp" android:paddingLeft="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/welcome"
+        android:id="@+id/txt_welcome"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/home_text_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/txt_saldo"
+        android:textColor="@color/home_text_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=""
+        android:id="@+id/txt_ultimo_movimiento"
+        android:textColor="@color/home_text_color" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/h_btn_ver_detalle"
+        android:id="@+id/btn_detalle" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/h_btn_prev_month"
+            android:id="@+id/btn_prev_month"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/txt_current_month"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/home_text_color"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:visibility="gone"
+            />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/h_btn_next_month"
+            android:id="@+id/btn_next_month"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lv_saldos"
+        android:textColor="@color/home_text_color" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/new_icon"
+            android:layout_width="@dimen/fab_size"
+            android:layout_height="@dimen/fab_size"
+            android:background="@drawable/ripple"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:elevation="4dp"
+            android:src="@mipmap/ic_add_white_48dp"
+            android:layout_gravity="end|bottom"
+            android:stateListAnimator="@drawable/button_elevation"/>
+    </FrameLayout>
+
+
+
+</LinearLayout>

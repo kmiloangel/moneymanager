@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:layout_marginTop="@dimen/card_view_margin"
+    android:id="@+id/card_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/nombre"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/cuenta_movimiento_text_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/descripcion"
+            android:layout_below="@+id/nombre"
+            android:textColor="@color/cuenta_movimiento_text_color"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Medium Text"
+            android:id="@+id/saldo"
+            android:layout_below="@+id/descripcion"
+            android:textColor="@color/cuenta_movimiento_text_color" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,304 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context="co.camaleon.moneymanager.fragments.MovimientoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <!--FILTER FRAME-->
+        <!--this linear layout is to make the filter 100% height-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:id="@+id/ll_filter"
+            android:visibility="gone">
+
+            <!--this is to enable scroll when the keyboard is open-->
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:orientation="vertical"
+                    android:layout_margin="@dimen/window_padding">
+
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_categoria"/>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sp_cuenta"
+                        android:layout_below="@+id/sp_categoria"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1.0"
+                        android:orientation="horizontal">
+                        <CheckBox
+                            android:id="@+id/ck_tipo_egreso"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:layout_marginRight="5dp"
+                            android:text="@string/txt_filter_egreso" />
+
+                        <CheckBox
+                            android:id="@+id/ck_tipo_ingreso"
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:checked="true"
+                            android:text="@string/txt_filter_ingreso" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/lbl_filter_date_from"
+                        android:id="@+id/lbl_date_from"
+                        android:paddingLeft="@dimen/lbl_padding_left_right"
+                        android:paddingRight="@dimen/lbl_padding_left_right"
+                        android:textSize="@dimen/label_font_size"/>
+
+                    <!--DATE TIME PICKER START-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_date_from_format"
+                            android:focusable="false"
+                            android:textSize="@dimen/field_font_size"/>
+
+                        <ImageButton
+                            android:layout_width="@dimen/date_picker_launcher_size"
+                            android:layout_height="@dimen/date_picker_launcher_size"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="6dp"
+                            android:src="@mipmap/ic_dp_28"
+                            android:id="@+id/btn_dp_date_from"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_date_from"
+                        android:visibility="gone"/>
+
+                    <!--DATE TIME PICKER END-->
+
+                    <!--DATE TIME PICKER START-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/lbl_filter_date_to"
+                        android:id="@+id/lbl_date_to"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:textSize="@dimen/label_font_size"/>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_date_to_format"
+                            android:focusable="false"
+                            android:textSize="@dimen/field_font_size"/>
+
+                        <ImageButton
+                            android:layout_width="@dimen/date_picker_launcher_size"
+                            android:layout_height="@dimen/date_picker_launcher_size"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="6dp"
+                            android:src="@mipmap/ic_dp_28"
+                            android:id="@+id/btn_dp_date_to"/>
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_date_to"
+                        android:visibility="gone"/>
+
+                    <!--DATE TIME PICKER END-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/lbl_filter_amount_from"
+                        android:id="@+id/lbl_amount_from"
+                        android:textSize="@dimen/label_font_size"
+                        android:paddingLeft="@dimen/lbl_padding_left_right"
+                        android:paddingRight="@dimen/lbl_padding_left_right"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:id="@+id/txt_amount_from" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/lbl_filter_amount_to"
+                        android:id="@+id/lbl_amount_to"
+                        android:textSize="@dimen/label_font_size"
+                        android:paddingLeft="@dimen/lbl_padding_left_right"
+                        android:paddingRight="@dimen/lbl_padding_left_right"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:id="@+id/txt_amount_to" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/m_lbl_descripcion"
+                        android:id="@+id/lbl_descripcion"
+                        android:textSize="@dimen/label_font_size"
+                        android:paddingLeft="@dimen/lbl_padding_left_right"
+                        android:paddingRight="@dimen/lbl_padding_left_right"/>
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_description" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="1.0"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cancelar"
+                            android:id="@+id/btn_cancel_filter"
+                            android:textSize="@dimen/button_font_size"
+                            android:background="@drawable/primary_button_press"
+                            android:textColor="@color/text_icon_color"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="2dp"/>
+
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_weight=".5"
+                            android:layout_height="wrap_content"
+                            android:text="@string/filter"
+                            android:id="@+id/btn_do_filter"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="2dp"
+                            android:textSize="@dimen/button_font_size"
+                            android:background="@drawable/primary_button"
+                            android:textColor="@color/text_icon_color"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/window_padding">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/filter"
+                android:id="@+id/btn_filter"
+                android:textSize="@dimen/button_font_size"
+                android:background="@drawable/primary_button_press"
+                android:textColor="@color/text_icon_color"
+                android:layout_marginBottom="@dimen/card_view_margin"
+                android:padding="@dimen/card_view_margin"
+                android:minHeight="0dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/movimiento_recycler"
+                android:scrollbars="vertical"
+                android:layout_below="@+id/btn_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/item_progress_bar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center|center"
+        android:visibility="gone"/>
+
+    <ImageButton
+        android:id="@+id/new_icon"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:background="@drawable/ripple"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:elevation="4dp"
+        android:src="@mipmap/ic_add_white_48dp"
+        android:layout_gravity="end|bottom"
+        android:stateListAnimator="@drawable/button_elevation"/>
+
+    <!--when theres no regs-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:id="@+id/fl_no_regs"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/no_regs"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="-20dp"
+            android:textColor="@color/no_regs"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo_grises"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"/>
+    </FrameLayout>
+
+
+</FrameLayout>

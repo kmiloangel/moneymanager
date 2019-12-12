@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">MoneyManager</string>
+
+    <string name="welcome">Bienvenido!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Nombres de los items -->
+    <string-array name="nav_drawer_items">
+        <item>Inicio</item>
+        <item>Movimientos</item>
+        <item>Categorías</item>
+        <item>Cuentas</item>
+    </string-array>
+
+    <string-array name="nav_drawer_titles">
+        <item>MoneyManager</item>
+        <item>Movimientos</item>
+        <item>Categorías</item>
+        <item>Cuentas</item>
+    </string-array>
+
+    <!-- Iconos de los items -->
+    <array name="nav_drawer_icons">
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_movimiento</item>
+        <item>@mipmap/ic_categoria</item>
+        <item>@mipmap/ic_cuenta</item>
+    </array>
+
+    <string-array name="movement_type_items">
+        <item>Todos los movimientos</item>
+        <item>Egreso</item>
+        <item>Ingreso</item>
+    </string-array>
+
+
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+
+    <!--Formulario nuevo movimiento-->
+    <string name="m_lbl_tipo">Tipo</string>
+    <string name="m_lbl_tipo_egreso">Egreso</string>
+    <string name="m_lbl_tipo_ingreso">Ingreso</string>
+    <string name="m_lbl_tipo_transferencia">Transferencia</string>
+    <string name="m_lbl_categoria">Categoría</string>
+    <string name="m_lbl_n_categoria">Nombre de la nueva Categoría</string>
+    <string name="m_lbl_cuenta">Cuenta</string>
+    <string name="m_lbl_n_cuenta">Nombre de la nueva Cuenta</string>
+    <string name="m_lbl_descripcion">Descripción</string>
+    <string name="m_lbl_fecha">Fecha</string>
+    <string name="m_lbl_valor">Valor</string>
+    <string name="txt_new_categoria">--Nueva Categoría--</string>
+    <string name="txt_new_cuenta">--Nueva Cuenta--</string>
+    <string name="txt_btn_date_time_picker">OK</string>
+
+    <string name="tipo_movimiento_egreso">Egreso</string>
+    <string name="tipo_movimiento_ingreso">Ingreso</string>
+
+    <string name="m_empty_valor_error">Debe ingresar el valor</string>
+    <string name="m_numeric_valor_error">El valor debe ser númerico</string>
+    <string name="m_empty_new_cat_error">Debe ingresar el nombre de la nueva categoría</string>
+    <string name="m_empty_new_cue_error">Debe ingresar el nombre de la nueva cuenta</string>
+
+    <!--Formulario nueva categoria-->
+    <string name="c_lbl_nombre">Nombre</string>
+    <string name="c_lbl_presupuesto">Prespuesto</string>
+
+    <!--Formulario nueva cuenta-->
+    <string name="cu_lbl_nombre">Nombre</string>
+    <string name="cu_lbl_descripcion">Descripción</string>
+
+    <!-- GENERAL-->
+    <string name="categoria">Categoria</string>
+    <string name="cuenta">Cuenta</string>
+    <string name="descripcion">Descripción</string>
+    <string name="saldo">Saldo</string>
+    <string name="empty_nombre_error">Debe ingresar el nombre</string>
+    <string name="no_regs">No hay registros. Crea uno ahora!</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+
+    <!--FILTERS-->
+    <string name="filter">Filtrar</string>
+    <string name="lbl_filter_date_from">Fecha desde</string>
+    <string name="lbl_filter_date_to">Fecha hasta</string>
+    <string name="lbl_filter_amount_from">Valor desde</string>
+    <string name="lbl_filter_amount_to">Valor hasta</string>
+    <string name="txt_choose_category">Todas las categorías</string>
+    <string name="txt_choose_account">Todas las cuentas</string>
+    <string name="txt_filter_egreso">Egresos</string>
+    <string name="txt_filter_ingreso">Ingresos</string>
+
+    <!--HOME-->
+    <string name="h_lbl_ultimo_movimiento">Último movimiento:</string>
+    <string name="h_lbl_saldo_actual">Su saldo actual:</string>
+    <string name="h_btn_ver_detalle">Ver detalle</string>
+    <string name="h_btn_prev_month">&lt;</string>
+    <string name="h_btn_next_month">&gt;</string>
+    <string name="saldo_ok">#00B22D</string>
+    <string name="saldo_slow">#D93600</string>
+
+
+</resources>
